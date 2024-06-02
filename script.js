@@ -29,18 +29,13 @@ function moveItensOnClick(type) {
         thumb.prepend(thumbItems[thumbItems.length - 1]);
         container.classList.add('back');
     }
-
-    setTimeout(() => {
-        container.classList.remove('next');
-        container.classList.remove('back');
-    }, 5000);
 }
 
 // Função para iniciar o carrossel automático
 function startCarousel() {
     intervalId = setInterval(() => {
         moveItensOnClick('next');
-    }, 5000);
+    }, 10000);
 }
 
 // Função para resetar o carrossel
