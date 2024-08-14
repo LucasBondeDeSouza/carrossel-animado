@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    width: 80%;
+    width: 80vw;
     height: 50px;
     display: flex;
     align-items: center;
@@ -154,6 +154,7 @@ header a {
 }
 
 .container .arrows button {
+    visibility: hidden;
     border-radius: 10px;
     border: none;
     padding: 12px 17px;
@@ -260,5 +261,71 @@ header a {
         border-radius: 10px;
         left: 50%;
         bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container .thumb {
+        bottom: 20px;
+        left: 10%;
+        gap: 10px;
+        overflow-x: scroll; /* Permite rolagem horizontal */
+        width: 90%; /* Ajusta o container para telas menores */
+    }
+
+    .container .thumb .thumb-item {
+        width: 90px;
+        height: 130px;
+    }
+
+    .container .list .list-item .content {
+        padding-right: 15%;
+        width: 85%;
+        top: 10%;
+        right: 5%;
+    }
+
+    .container .list .list-item .title {
+        font-size: 2.5em;
+    }
+
+    .container .list .list-item .description {
+        font-size: 1em;
+    }
+
+    .container .list .list-item .buttons button {
+        width: 80px;
+        font-size: 12px;
+    }
+
+    .container .arrows {
+        bottom: 60px;
+        left: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .thumb .thumb-item {
+        width: 70px;
+        height: 100px;
+    }
+
+    .container .list .list-item .title {
+        font-size: 1.8em;
+    }
+
+    .container .list .list-item .description {
+        font-size: 0.9em;
+    }
+
+    .container .arrows {
+        bottom: 40px;
+        left: 5%;
+        width: 250px;
+    }
+
+    .container .arrows button {
+        padding: 8px 12px;
+        font-size: 1.2em;
     }
 }
